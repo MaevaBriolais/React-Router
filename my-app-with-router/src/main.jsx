@@ -9,11 +9,22 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Article from "./pages/Article";
 
+const getWeatherOfTheDay = () => {
+  return "sunny";
+};
+
 // router creation
 
 const router = createBrowserRouter([
   {
     element: <App />,
+    loader: () => {
+      const weather = "sunny";
+
+      return weather;
+    },
+    id: "app",
+
     children: [
       {
         path: "/",
