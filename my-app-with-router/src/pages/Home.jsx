@@ -7,6 +7,7 @@ function Home() {
     <>
       <h1>Hello from Home</h1>
       <p>Today is a {weather} day</p>
+      <p>Je comprends pas pourquoi mes pages articles ne fonctionnent pas</p>
     </>
   );
 }

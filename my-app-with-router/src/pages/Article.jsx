@@ -1,13 +1,14 @@
-import { useParams } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 
 function Article() {
-    // const allValuesForTheDynamicSegments = useParams();
-    // const id = allValuesForTheDynamicSegments.id;
+  const data = useLoaderData();
 
-    //La version destructurée des deux const au-dessus : 
-  const { id } = useParams();
-
-  return <h1>Hello from Article {id}</h1>;
+  return (
+    <article>
+      <h1>{data.title}</h1>
+      <p>{data.content}</p>
+    </article>
+  );
 }
 
 export default Article;
